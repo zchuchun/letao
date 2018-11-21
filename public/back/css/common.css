@@ -98,7 +98,7 @@ a:visited{
     padding-left:60px;
 }
 
-.current{
+.lt_aside .info ul li a.current{
     background-color: #1D1F21;
     border-left:3px solid #006699;
 }
@@ -150,4 +150,11 @@ a:visited{
     height: 400px;
  
 }
+.table.table-bordered th,
+.table.table-bordered td{
+    text-align: center;
+    vertical-align: middle;
+
+}
+
 
