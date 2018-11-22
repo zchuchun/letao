@@ -1,19 +1,15 @@
-
+$(document).ajaxStart(function(){
+    NProgress.start();
+})
+$(document).ajaxStop(function(){
+    setTimeout(function(){
+        NProgress.done();
+    },500)
+})
 
 // 进度条
 $(function(){
-    $(document).ajaxStart(function(){
-        NProgress.start();
-    })
-    $(document).ajaxStop(function(){
-        setTimeout(function(){
-            NProgress.done();
-        },2000)
-    })
-})
-
-
-// 公用的功能
+   // 公用的功能
 
 $(".category").click(function(){
     $(this).next().stop().slideToggle();
@@ -48,3 +44,6 @@ $(".loginout").click(function(){
         }
     })
 })
+})
+
+
