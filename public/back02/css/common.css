@@ -1,4 +1,4 @@
-body{
+.body{
     background-color: #222D32;
 }
 .box{
@@ -8,4 +8,49 @@ body{
     text-align: center;
     line-height:40px;
     font-size:20px;
+}
+
+a,
+a:hover,
+a:link,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+.aside{
+    width:180px;
+    height: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+    background-color: #222D32;
+}
+
+.aside .title{
+    height: 50px;
+    background-color: #367FA9;
+}
+.aside .title a{
+    display:block;
+    line-height: 50px;
+    color:#fff;
+    font-size:20px;
+    text-align: center;
+}
+.aside .user{
+    margin-top:30px;
+}
+.aside .info .user img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display:block;
+    margin:0 auto;
+   
+}
+.aside .info .user p{
+    font-size:20px;
+    text-align: center;
+    color:#fff;
+    margin-top:8px;
 }
