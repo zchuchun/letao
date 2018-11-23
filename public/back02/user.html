@@ -22,7 +22,7 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="user.html"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+                    <li><a href="user.html" class="current"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
                     <li><a href="#" class="toggle"><i class="glyphicon glyphicon-list"></i>分类管理</a>
                         <div class="cate">
                             <a href="first.html">一级分类</a>
@@ -44,13 +44,23 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li><a href="index.html">管理系统</a></li>
-                <li class="active">首页</li>
+                <li class="active">用户管理</li>
               </ol>
 
-              <div class="charts">
-                  <div class="c_left pull-left" id="c_left"></div>
-                  <div class="c_right pull-right" id="c_right"></div>
-              </div>
+              <table class="table table-bordered table-hover">
+                  <thead>
+                      <tr>
+                          <th>序号</th>
+                          <th>用户名</th>
+                          <th>手机号</th>
+                          <th>状态</th>
+                          <th>操作</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                       
+                  </tbody>
+              </table>
               
         </div>
     </div>
@@ -75,11 +85,32 @@
       </div>
       
 </body>
+
+<script type="text/html" id="tmp">
+{{each rows v i}}
+<tr>
+    <td>{{i+1+(page-1)*size}}</td>
+    <td>{{v.username}}</td>
+    <td>{{v.mobile}}</td>
+    <td>{{v.isDelete === 1 ? '正常' : '已禁用'}}</td>
+   
+    <td>
+     {{if v.isDelete ===1}}
+        <button class="btn btn-danger">禁用</button>
+    {{else}}
+    <button class="btn btn-success">启用</button>
+    </td>
+    {{/if}}
+</tr>
+
+{{/each}}
+</script>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
 <script src="js/isLogin.js"></script>
-<script src="js/index.js"></script>
+<script src="js/user.js"></script>
 </html>
