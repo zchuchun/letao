@@ -81,6 +81,7 @@ $(function () {
 
             }
 
+
             if (arr.length === 3) {
                 $('#form').data("bootstrapValidator").updateStatus('picStatus', 'VALID');
             }
@@ -182,15 +183,17 @@ $(function () {
 
         var pstr = $('#form').serialize();
         pstr += "&picName1=" + arr[0].picName + " +&picAddr1=" + arr[0].picAddr;
-        pstr += "&picName1=" + arr[1].picName + " +&picAddr1=" + arr[1].picAddr;
-        pstr += "&picName1=" + arr[2].picName + " +&picAddr1=" + arr[2].picAddr;
+        pstr += "&picName2=" + arr[1].picName + " +&picAddr2=" + arr[1].picAddr;
+        pstr += "&picName3=" + arr[2].picName + " +&picAddr3=" + arr[2].picAddr;
 
+        console.log(pstr);
         $.ajax({
             type:'post',
             url:'/product/addProduct',
             data:pstr,
             dataType:'json',
             success:function(info){
+                console.log(info);
                 if(info.success){
                     $("#addModal").modal("hide");
 
