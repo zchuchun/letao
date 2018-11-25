@@ -1,0 +1,18 @@
+
+.nav{
+    padding:10px;
+}
+
+
+.nav li{
+    float:left;
+    width:33.33%;
+    
+}
+.nav li a{
+    display:block;
+}
+.nav li a img{
+    display:block;
+    width:100%;
+}

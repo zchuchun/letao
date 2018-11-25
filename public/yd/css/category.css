@@ -1,0 +1,53 @@
+.main{
+    padding-left:90px;
+}
+.main .cate_left {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 90px;
+    height: 100%;
+}
+.main .cate_left li{
+    width: 90px;
+    height: 50px;
+    background-color: pink;
+
+
+}
+.main .cate_left li a{
+    display:block;
+    line-height: 50px;
+    background-color: #E3E4E5;
+    text-align: center;
+    color:#666666;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+.main .cate_left li a.active{
+    background-color: #fff;
+    border-right:none;
+}
+.main .cate_right{
+    position: relative;
+    height:100%;
+    right:0;
+    top:0;
+}
+
+.main .cate_right li{
+    width:33.33%;
+    float:left;
+}
+.main .cate_right li a{
+    display:block;
+    text-align: center;
+}
+.main .cate_right li a img{
+    width:70px;
+    height: 50px;
+}
+
+.tips{
+    padding:10px;
+}
