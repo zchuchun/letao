@@ -19,8 +19,7 @@ $(function(){
 
 
     function renderId(id){
-        $('.cate a').removeClass('active');
-        $(this).addClass('active');
+      
         $.ajax({
             type:'get',
             url:'/category/querySecondCategory',
@@ -38,6 +37,8 @@ $(function(){
        }
     $('.cate').on('click','a',function(){
         id = $(this).data("id");
+        $('.cate a').removeClass('active');
+        $(this).addClass('active');
       renderId(id);
     })
 })

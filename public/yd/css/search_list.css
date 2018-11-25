@@ -1,0 +1,16 @@
+
+
+.sort{
+    background-color: #EEEEEE;
+    height: 30px;
+}
+
+.sort a{
+    width:25%;
+    display:block;
+    float:left;
+    font-size:12px;
+    color:#666;
+    line-height: 30px;
+    text-align: center;
+}

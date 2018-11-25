@@ -1,0 +1,43 @@
+
+
+
+.history{
+    padding:10px;
+}
+.history .title{
+    font-size:12px;
+    color:#666666;
+}
+
+.history .info ul{
+    border:1px dashed red;
+    margin-top:5px;
+}
+.history .info li{
+    height: 30px;
+    border-bottom:1px dashed red;
+    margin:0;
+    
+}
+.history .info li:last-child{
+    border-bottom:none;
+}
+
+.history .info li .record{
+    height: 30px;
+    display:block;
+    font-size:12px;
+    padding:5px;
+    line-height: 20px;
+    text-align: center;
+  
+}
+.history .info li .del i{
+    color:#666;
+    display: block;
+    text-align: center;
+   font-size:24px;
+}
+.history .info li .del i{
+    line-height: 30px;
+}
