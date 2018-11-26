@@ -49,16 +49,16 @@ $(function(){
     // 添加历史纪录
 
     $('.btn_search').click(function(){
-       var txt =  $('#search').val().trim();
+       var key =  $('#search').val().trim();
 
-       if(txt === ''){
+       if(key === ''){
         mui.toast('请输入关键词') ;
         return;
        }
        var arr = getHistory();
     //    如果有重复项需要删除重复项
 
-        var index = arr.indexOf(txt);
+        var index = arr.indexOf(key);
         if(index !== -1){
             arr.splice(index,1);
         }
@@ -66,13 +66,13 @@ $(function(){
         if(arr.length >= 10){
             arr.pop();
         }
-       arr.unshift(txt);
+       arr.unshift(key);
        var jsonStr = JSON.stringify(arr);
        localStorage.setItem('search_list',jsonStr);
        render();
        $('#search').val('');
 
-       location.href = "search_list.html?txt="+txt;
+       location.href = "search_list.html?key="+key;
     })
 
 })

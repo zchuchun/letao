@@ -10,12 +10,12 @@
 }
 
 .history .info ul{
-    border:1px dashed red;
+    border:1px dashed #ccc;
     margin-top:5px;
 }
 .history .info li{
     height: 30px;
-    border-bottom:1px dashed red;
+    border-bottom:1px dashed #ccc;
     margin:0;
     
 }
@@ -30,6 +30,7 @@
     padding:5px;
     line-height: 20px;
     text-align: center;
+    color:rgb(97, 205, 248);
   
 }
 .history .info li .del i{
