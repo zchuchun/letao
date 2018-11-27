@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/search_list.css">
-
+  
 
     <title>index</title>
 </head>
@@ -17,7 +16,7 @@
         <!-- 头部 -->
         <div class="header">
             <a href="javascript:history.back()" class="h_left"><i class="mui-icon mui-icon-back"></i></a>
-            <h3>商品列表</h3>
+            <h3>登录</h3>
            
         </div>
 
@@ -25,25 +24,24 @@
         <div class="main">
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                   <div class="search">
-                       <input id="search" type="text" placeholder="请输入搜索关键字">
-                       <button class="mui-btn mui-btn-primary btn_search">搜索</button>
-                   </div>
 
-                   <div class="sort mui-clearfix">
-                       <a href="#">上架时间 <i class="fa fa-angle-down"></i></a>
-                       <a data-type="price" href="#">价格 <i class="fa fa-angle-down"></i></a>
-                       <a data-type="num" href="#">库存 <i class="fa fa-angle-down"></i></a>
-                       <a href="#">折扣 <i class="fa fa-angle-down"></i></a>
-                   </div>
-                  
-                   <div class="product">
-                     
-                       <!-- 挖坑 -->
+                <form class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label>用户名</label>
+                        <input type="text" class="mui-input-clear" name="username" placeholder="请输入用户名">
                         </div>
-                </div>
-            </div>
-        </div>
+                        <div class="mui-input-row">
+                            <label>密码</label>
+                            <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
+                        </div>
+                        <div class="mui-button-row">
+                            <button type="button" class="mui-btn mui-btn-primary login" >登录</button>
+                            <button type="reset" class="mui-btn mui-btn-danger reset" >重置</button>
+                        </div>
+                    </form>
+                   </div>
+                   </div>
+                   </div>
                   
         <!-- 底部 -->
         <div class="footer">
@@ -60,7 +58,7 @@
                     <i class="fa fa-shopping-cart"></i>
                     <p>购物车</p>
                 </a></li>
-                <li><a href="user.html">
+                <li><a href="user.html" class="current">
                     <i class="fa fa-user"></i>
                     <p>用户中心</p>
                 </a></li>
@@ -70,30 +68,10 @@
         </div>
     </div>
 
-    <script type="text/html" id="tmp">
-
-        
-        <ul class="mui-clearfix">
-            {{each data v i}}
-            <li>
-                <a href="#" data-id="{{v.id}}">
-                    <img src="{{v.pic[0].picAddr}}" alt="">
-                    <p class="mui-ellipsis-2">{{v.proName}}</p>
-                    <p><span class="price red">&yen;{{v.price}}</span>  <span class="oldPrice">&yen;{{v.oldPrice}}</span></p>
-                    <button class="mui-btn mui-btn-primary">立即购买</button>
-                </a>
-            </li>
-            {{/each}}
-        </ul>
-   
-    </script>
-    
-   
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.js"></script>
-    <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/search_list.js"></script>
+    <script src="js/login.js"></script>
 
   
 </body>
